@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333333;
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.effect-2 {
+  margin: 100px auto;
+  padding: 30px 0;
+  width: 400px;
+  background-color: #435a6b;
+  text-align: center;
+}
+
+.effect-2 a {
+  padding: 0 20px;
+  height: 45px;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 45px;
+}
+
+.effect-2 a::before,
+.effect-2 a::after {
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background-color: #ffffff;
+  content: "";
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+
+.effect-2 a::before {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+}
+
+.effect-2 a::after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(90deg);
+  transform-origin: 100% 100%;
+}
+
+.effect-2 a:hover::before,
+.effect-2 a:hover::after {
+  opacity: 1;
+}
+
+.effect-2 a:hover::before {
+  left: 50%;
+  transform: rotate(0deg) translateX(-50%);
+}
+
+.effect-2 a:hover::after {
+  right: 50%;
+  transform: rotate(0deg) translateX(50%);
+}
